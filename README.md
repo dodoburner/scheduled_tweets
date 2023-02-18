@@ -1,24 +1,14 @@
-# README
+Thing that I learned:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+VIEWS
+- Partials are like components in react
 
-Things you may want to cover:
+ROUTES
+- You can rename url names but have the same path name using "as: :whatever"
 
-* Ruby version
+FLASHES
+- You can declare flashes as a hash in the controller to display
+- You can use flash.now to have it show up only once
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+DEBUGGIN
+- You can use .inspect to debug variables
