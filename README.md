@@ -15,6 +15,12 @@ VIEWS
 ROUTES
 - You can rename url names but have the same path name using "as: :whatever"
 
+CONTROLLERS
+- Instance variables (ones with @) can be used in views apart from regular variables that are only used inside that method where it was defined
+
+FORMS
+- When adding a model to the form_with helper it automatically looks for route with that model, but you can change the path by adding a url option to it
+
 FLASHES
 - You can declare flashes as a hash in the controller to display
 - You can use flash.now to have it show up only once
