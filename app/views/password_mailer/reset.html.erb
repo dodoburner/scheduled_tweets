@@ -1,0 +1,8 @@
+<h1>Hi <%= @user.email %></h1>
+
+Reset your password by clicking the link below.
+
+The link will expire in 15minutes from sending this email.
+
+<%= link_to "Reset password", reset_password_edit_url(token: @token) %>
+
