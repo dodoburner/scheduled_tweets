@@ -20,16 +20,20 @@ ROUTES
 CONTROLLERS
 - Instance variables (ones with @) can be used in views apart from regular variables that are only used
 inside that method where it was defined
-- When using params.require(:user) for example it is the same as using params[:user]
+- When using params.require(:user) it is the same as using params[:user]
 except require will raise an error if user not found
+- Model.find will throw an error if it cant find the record in the DB, it is
+used for when we are sure it should exist. But find_by will not
 
 FORMS
 - When adding a model to the form_with helper it automatically looks for route with that model,
 but you can change the path by adding a url option to it
+- Add data: {turbo: false} on forms, also add status: :unprocessable_entity when rendering after
+failed save
 
 FLASHES
 - You can declare flashes as a hash in the controller to display
 - You can use flash.now to have it show up only once
 
 DEBUGGING
-- You can use .inspect to debug variables
+- You can use .inspect to debug variables inside html

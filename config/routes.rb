@@ -5,5 +5,10 @@ Rails.application.routes.draw do
 
   get "sign-up", to: "registrations#new"
   post "sign-up", to: "registrations#create"
+
+  delete "logout", to: "sessions#delete"
+  get "sign-in", to: "sessions#new"
+  post "sign-in", to: "sessions#create"
+
   root "main#index"
 end
