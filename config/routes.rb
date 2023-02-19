@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   get "about-us", to: "about#index", as: :about
 
+  get "edit-password", to: "passwords#edit"
+  patch "edit-password", to: "passwords#update"
+
   get "sign-up", to: "registrations#new"
   post "sign-up", to: "registrations#create"
 
