@@ -5,6 +5,8 @@ MODELS
 it generates virtual password and password confirmation attributes that are securely hashed in password_digest
 by running them through bcrypt (uncomment the bcrypt gem)
 - You can add validations on the model and on the migration
+- Creating a Current model can help us set attributes that are set for that request, for example
+user, timezone etc..
 
 DATABASE
 - DON'T FORGET TO SETUP APP WITH POSTGRES!!
@@ -24,6 +26,7 @@ inside that method where it was defined
 except require will raise an error if user not found
 - Model.find will throw an error if it cant find the record in the DB, it is
 used for when we are sure it should exist. But find_by will not
+- @user.authenticate is a method provided by adding has_secure_password to the model
 
 FORMS
 - When adding a model to the form_with helper it automatically looks for route with that model,
